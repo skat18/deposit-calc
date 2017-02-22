@@ -9,13 +9,13 @@ int main() {
 int cash=0, srok=0;
 cout<<"Enter the amount"<<endl;
 cin>>cash;
-if(cash<10000) {
+    if(cash<10000) {
 cout<<"Error"<<endl;
 return 0;
 }
 cout<<"Enter srok vklada"<<endl;
 cin>>srok;
-if(srok>365 || srok<0) {
+    if(srok>365 || srok<0) {
 cout<<"Error"<<endl;
 return 0;
 }
