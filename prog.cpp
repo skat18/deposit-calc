@@ -3,43 +3,56 @@
 #include <ctime>
 #include <stdlib.h>
 
-using namespace std;
+
+void Cheak(int* amount,int* days);
+void Perform(int* amount,int* days);
+
 
 int main() {
-int cash=0, srok=0;
-cout<<"Enter the cash"<<endl;
-cin>>cash;
-cout<<"Enter srok vklada"<<endl;
-cin>>srok;
-calc(cash,srok);
-clac(cash,srok);
+int amount=0,days=0;
+printf("Enter amount ");
+scanf("%d,",&amount);
+printf("Enter days ");
+scanf("%d",&days);
+
+Cheak(&amount,&days);
+Perform(&amount,&days);
+
+printf("%d",amount);
+
 return 0;
 }
-void calc(int cash, int srok) {
-	if (*cash<10000 || *srok <0 || srok>365) {
-		calc(cash,srok);}
+
+void Cheak(int* amount,int* days){
+if(*amount<10000|| *days<0 || *days>365 ){
+Cheak(amount, days);
+}
+}
+
+void Perform(int* amount,int* days){
+	if(*days>0 && *days<=30) {
+      *amount*=0.9;
 	}
-void clac(int cash, int srok){
-    if(srok>0 && srok<=30) {
-      cash=cash-(cash*0.1);
-    } else if(srok>=31 && srok<=120) {
-        cash=cash+(cash*0.02);
-    } else if(srok>=121 && srok<=240) {
-        cash=cash+(cash*0.06);
-    } else if(srok>=241 && srok<=365) {
-        cash=cash+(cash*0.12);
-    }
-}
- {
-    if (srok>0 && srok<=30) {
-	cash=cash-(cash*0.1);}
-    else if(srok>=31 && srok<=120) {
-        cash=cash+(cash*0.03);}
-    else if(srok>=121 && srok<=240) {
-	cash=cash+(cash*0.08);}
-    else if(srok>=241 && srok<=365) {
-	cash=cash=(cash*0.15);}
-}
-system("pause");
-return 0;
+	if(*amount<=100000) {
+
+	     if(*days>=31 && *days<=120) {
+	        *amount*=1.02;
+	    } 
+		 if(*days>=121 && *days<=240) {
+	        *amount*=1.06;
+	    } 
+		 if(*days>=241 && *days<=365) {
+	        *amount*=1.12;
+    	}
+	} else if(*amount>100000) {
+    	} 
+		 if(*days>=31 && *days<=120) {
+	      *amount*=1.03;
+	    }
+		 if(*days>=121 && *days<=240) {
+	      *amount*=1.08;
+	    } 
+		 if(*days>=241 && *days<=365) {
+	      *amount*=1.15;
+	    }
 }
