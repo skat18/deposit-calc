@@ -9,17 +9,17 @@ int main() {
 int cash=0, srok=0;
 cout<<"Enter the cash"<<endl;
 cin>>cash;
-    if(cash<10000) {
-cout<<"Error"<<endl;
-return 0;
-}
 cout<<"Enter srok vklada"<<endl;
 cin>>srok;
-    if(srok>365 && srok<0) {
-cout<<"Error"<<endl;
+calc(cash,srok);
+clac(cash,srok);
 return 0;
 }
-if(cash<=100000 && cash>=10000) {
+void calc(int cash, int srok) {
+	if (*cash<10000 || *srok <0 || srok>365) {
+		calc(cash,srok);}
+	}
+void clac(int cash, int srok){
     if(srok>0 && srok<=30) {
       cash=cash-(cash*0.1);
     } else if(srok>=31 && srok<=120) {
@@ -29,8 +29,9 @@ if(cash<=100000 && cash>=10000) {
     } else if(srok>=241 && srok<=365) {
         cash=cash+(cash*0.12);
     }
-} else if (cash>100000) {
-    if (srok>0 && srok<=30)
+}
+ {
+    if (srok>0 && srok<=30) {
 	cash=cash-(cash*0.1);}
     else if(srok>=31 && srok<=120) {
         cash=cash+(cash*0.03);}
@@ -39,7 +40,6 @@ if(cash<=100000 && cash>=10000) {
     else if(srok>=241 && srok<=365) {
 	cash=cash=(cash*0.15);}
 }
-cout<<cash<<endl;
 system("pause");
 return 0;
 }
