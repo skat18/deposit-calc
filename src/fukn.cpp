@@ -3,26 +3,6 @@
 #include <ctime>
 #include <stdlib.h>
 
-
-void Cheak(int* amount,int* days);
-void Perform(int* amount,int* days);
-
-
-int main() {
-int amount=0,days=0;
-printf("Enter amount ");
-scanf("%d,",&amount);
-printf("Enter days ");
-scanf("%d",&days);
-
-Cheak(&amount,&days);
-Perform(&amount,&days);
-
-printf("%d",amount);
-
-return 0;
-}
-
 void Cheak(int* amount,int* days){
 if(*amount<10000|| *days<0 || *days>365 ){
 Cheak(amount, days);
