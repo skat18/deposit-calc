@@ -3,10 +3,12 @@
 #include <ctime>
 #include <stdlib.h>
 
-void Cheak(int* amount,int* days){
+using namespace std;
+
+int Cheak(int* amount,int* days){
 if(*amount<10000|| *days<0 || *days>365 ){
-Cheak(amount, days);
-}
+return 1;
+} return 0;
 }
 
 void Perform(int* amount,int* days){

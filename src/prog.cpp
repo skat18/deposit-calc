@@ -13,7 +13,7 @@ cin>>amount;
 cout<<"Enter days ";
 cin>>days;
 
-Cheak(&amount,&days);
+if (Cheak(&amount,&days)) {cout << "Error"; return 1;}
 Perform(&amount,&days);
 
 printf("%d",amount);

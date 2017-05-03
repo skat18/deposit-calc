@@ -1,2 +1,2 @@
-void Cheak(int*,int*);
+int Cheak(int*,int*);
 void Perform(int*,int*);
