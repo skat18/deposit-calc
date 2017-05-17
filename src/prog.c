@@ -5,9 +5,9 @@
 int main() {
 int amount=0,days=0;
 printf("Enter amount ");
-skanf("%d", &amount);
+scanf("%d", &amount);
 printf("\n Enter days ");
-skanf("%d", &days);
+scanf("%d", &days);
 
 if (Cheak(amount,days)) {printf("\n Error \n"); return 1;}
 amount = Perform(amount,days);

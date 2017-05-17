@@ -7,11 +7,11 @@ return 1;
 } return 0;
 }
 
-void Perform(int amount,int days){
+int Perform(int amount,int days){
 	if(days>0 && days<=30) {
       amount*=0.9;
 	}
-	if(*amount<=100000) {
+	if(amount<=100000) {
 
 	     if(days>=31 && days<=120) {
 	        amount*=1.02;
