@@ -17,6 +17,8 @@ ggg: $(SRS_BUILD)/prog.o $(SRS_BUILD)/func.o
 
 $(SRS_BUILD)/prog.o: src/prog.c
 	mkdir -p build
+	mkdir -p build/src
+	mkdir -p build/test
 	$(CC) $(FLAGS) -c src/prog.c -o $(SRS_BUILD)/prog.o
 
 $(SRS_BUILD)/func.o: src/func.c
