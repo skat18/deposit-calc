@@ -10,3 +10,8 @@ CTEST(input, sum_more10k) {
     int res = Cheak(10001,45);
     ASSERT_EQUAL(0, res);
 }
+
+CTEST(input, negative_amount) {
+    int res = Cheak(-10001,45);
+    ASSERT_EQUAL(1, res);
+}
